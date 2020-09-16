@@ -1,0 +1,21 @@
+body {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result{
+  display: none;
+}
+
+.warning {
+  display: none;
+}
+
+.win {
+  display: none;
+}
+
+.lose {
+  display: none;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Wildcat Men's Basketball Prediction</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="landing">
+    <h1>NU Men's Basketball Prediction</h1>
+    <h1>(Placeholder for landing section)</h1>
+  </div>
+
+
+
+  <div id="formInput">
+  <h2>Will NU Wildcat Win?</h2>
+  <p>In order to make a prediction, we need some numbers from you. Please enter all the values.</p>
+  <form id="data">
+    <label for="nuWinPercent">NU win/loss percent:</label>
+    <input type="number" id="nuWinPercent" name="nuWinPercent"><span>%</span><br>
+    <label for="oppoWinPercent">Opponent win/loss percent:</label>
+    <input type="number" id="oppoWinPercent" name="oppoWinPercent"><span>%</span><br>
+
+    <label for="nuPoints">NU points per game:</label>
+    <input type="number" id="nuPoints" name="nuPoints"><br>
+    <label for="oppoPoints">Opponent points per game:</label>
+    <input type="number" id="oppoPoints" name="oppoPoints"><br>
+
+    <label for="nuFouls">NU fouls per season:</label>
+    <input type="number" id="nuFouls" name="nuFouls"><br>
+    <label for="nuFG">NU field goal percent per season:</label>
+    <input type="number" id="nuFG" name="nuFG"><span>%</span><br>
+
+    <label for="homeCourt">At NU's home court?</label>
+    <select id="homeCourt">
+      <option selected>...</option>
+      <option>yes</option>
+      <option>no</option>
+    </select>
+
+    <label for="oppoCourt">At opponent's court?</label>
+    <select id="oppoCourt">
+      <option selected>...</option>
+      <option>yes</option>
+      <option>no</option>
+    </select> <br>
+
+    <button class="btn btn-primary" type="submit" id="go">Go!</button>
+    <input type="reset" value="Clear All">
+
+  </div>
+
+
+  <div id="resultBox" class="result">
+    <div class="win">
+      <h3>Yay! Looks like NU has a great chance to win 🤩</h3>
+    </div>
+
+    <div class="lose">
+      <h3>Oh no! Looks like NU is going to lose 😞</h3>
+    </div>
+
+    <a href="#formInput" type="button" id="backToForm" class="btn btn-primary">Try Different Values</a> <br>
+    <a href="#explanation">Learn more about the prediction model</a>
+  </div>
+
+  <div class="explanation">
+    <h1>(Placeholder for explanation)</h1>
+  </div>
+
+</body>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<script src="index.js"></script>
+
+</html>
