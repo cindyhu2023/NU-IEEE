@@ -31,7 +31,7 @@ $("#go").click(function(event){
   //if yes, show alert
   //if not, do calculation and show result
   if (checkEmpty()){
-    alert('please fill in all the fields');
+    alert('please fill in all the fields (numbers only)');
   }
   else {
     calc();
