@@ -81,6 +81,8 @@ function checkInput(n){
     result = undefined;
   } else if (n === undefined) {
     result = undefined;
+  } else if (+n === NaN ) {
+    result = undefined;
   } else {
     result = +n;
   }
