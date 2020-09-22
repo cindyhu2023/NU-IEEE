@@ -12,14 +12,14 @@
 
 <body>
   <div class="landing">
-    <h1>NU Men's Basketball Prediction</h1>
-    <h1>(Placeholder for landing section)</h1>
+    <h1>Northwestern Men's Basketball Predictions</h1>
+    <p>(with machine learning)</p>
   </div>
 
 
 
   <div id="formInput">
-  <h2>Will NU Wildcat Win?</h2>
+  <h2>Will the Wildcats Win?</h2>
   <p>In order to make a prediction, we need some numbers from you. Please enter all the values.</p>
   <form id="data">
     <label for="nuWinPercent">NU win/loss percent:</label>
@@ -32,9 +32,9 @@
     <label for="oppoPoints">Opponent points per game:</label>
     <input type="number" id="oppoPoints" name="oppoPoints"><br>
 
-    <label for="nuFouls">NU fouls per season:</label>
+    <label for="nuFouls">NU fouls per game:</label>
     <input type="number" id="nuFouls" name="nuFouls"><br>
-    <label for="nuFG">NU field goal percent per season:</label>
+    <label for="nuFG">NU field goal percent</label>
     <input type="number" id="nuFG" name="nuFG"><span>%</span><br>
 
     <label for="homeCourt">At NU's home court?</label>
@@ -71,7 +71,35 @@
   </div>
 
   <div class="explanation">
-    <h1>(Placeholder for explanation)</h1>
+    <h4><br>How we did the project:</h4>
+    <p>The goal of this project was to create a model to predict the outcome (win/loss) of Northwestern’s basketball games. We take into account season data such as: <br> <br>
+      •Northwestern’s win/loss percentage <br>
+      •Opponent’s win/loss percentage <br>
+      •Northwestern’s average points per game <br>
+      •Opponent’s average points per game <br>
+      •Northwestern’s average fouls per game <br>
+      •Northwestern’s field goal percent <br>
+      •Northwestern home court advantage <br>
+      •Opponent home court advantage <br> <br>
+    </p>
+
+
+    <details>
+      <p>During the training process we encountered some difficulties around the size of the training set. In order to maintain data relevancy, we opted out of using game data from games that didn’t involve Northwestern. While this allowed us to use Northwestern specific data in our model, we were hampered by the natural limitation in data. Our current model performs at ~85% accuracy on the test data. </p>
+
+      <summary>Read more/less</summary>
+      <p>The model was trained on Northwestern game data from the last 10 years. To test how well our model performed, we split all the data into the training set (70%) and the test set (30%). The data was randomly ordered, then split to ensure uniformity. This allowed us to get an estimate of how well our model would perform when given new data for a new season. Afterwards, we scaled the data and adjusted the means to make sure the learning algorithm effectively ran.
+        <br> Our model was then trained using logistic regression with a binary classification output. The cutoff can be adjusted to change the amount of false positives and false negatives, but, rather than focus on that, we chose to maximize accuracy (found by dividing # of true positives by # of test data points).
+        <br> <br> After the model was trained, we tried adding regularization to increase the model’s performance on the test data set. However, due to the smaller dataset, we had relatively low variance. This meant that the model didn’t struggle with overfitting.
+        <br> <br> Data Sources: <br>
+        https://www.sports-reference.com/cbb/schools/northwestern/2020-gamelogs.html <br>
+        (General Season Data)<br> <br>
+        https://www.teamrankings.com/ncaa-basketball/stat/points-per-game?date=2011-04-04<br>
+        (Opponent and NU Points/Game)
+
+      </p>
+    </details>
+
   </div>
 
 </body>
